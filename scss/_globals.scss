@@ -1,0 +1,33 @@
+/* 
+Theme Rules
+	Theme Rules aren’t used as often within a project and because of
+that I was quite reluctant to include them as their own category.
+Some projects do have a need for them, though, as we did when
+working on Yahoo! Mail.
+	It is probably self-evident but a theme defines colours and images
+that give your application or site its look and feel. Separating the
+theme out into its own set of styles allows for those styles to be easily
+redefined for alternate themes. The need for theming within a
+project is necessary when you want the user to receive an alternate
+skin that provides some cosmetic alterations.
+	For example, your site may have different colours for different sections
+of the site. Or you may allow users to customize the colour
+based on a user preference. Or you may need to provide themes
+based on locale such as country or language. 
+*/
+
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+$color: #242424;
+$gutters: 20px;
