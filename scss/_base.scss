@@ -6,3 +6,18 @@ It doesn’t include any class or ID selectors. It is defining the
 default styling for how that element should look in all occurrences
 on the page.
 */
+
+body {
+	font-family: helvetica, verdana, sans-serif;
+	margin: 0 auto;
+	max-width: 1140px;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+p:first-of-type {
+	margin-top: 0;
+}
