@@ -28,7 +28,7 @@ header[role="banner"] {
 .banner-logo {
 	box-sizing: border-box;
 	float: left;
-	padding: $gutters;
+	padding: $gutters $gutters/2 $gutters $gutters;
 	width: 24%;
 	@media (max-width: 480px) {
 		width: 100%;
@@ -42,7 +42,7 @@ header[role="banner"] {
 .banner-text {
 	box-sizing: border-box;
 	float: left;
-	padding: $gutters;
+	padding: $gutters $gutters $gutters $gutters/2;
 	width: 76%;
 	@media (max-width: 480px) {
 		font-size: 30px;
@@ -50,14 +50,85 @@ header[role="banner"] {
 	}
 }
 
-.group:after {
-	clear: both;
-	content: "";
-	display: table;
-}
-
 .work {
 	background: url('../img/seattle.jpg') no-repeat center center;
 	background-size: cover;
 	height: 300px;
+	line-height: 300px;
+	@media (max-width: 480px) {
+		height: 150px;
+		line-height: 150px;
+	}
+	text-align: center;
+	margin-top: $gutters;
+}
+
+.branding, .interactive, .marketing {
+	float: left;
+	box-sizing: border-box;
+	text-align: justify;
+	width: 33.33333333%;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+}
+
+.branding {
+	padding: $gutters $gutters/2 $gutters 0;
+	@media (max-width: 768px) {
+		padding: $gutters $gutters $gutters/2 $gutters;
+	}
+}
+
+.interactive {
+	padding: $gutters $gutters/2 $gutters $gutters/2;
+	@media (max-width: 768px) {
+		padding: $gutters/2 $gutters;
+	}
+}
+
+.marketing {
+	padding: $gutters 0 $gutters $gutters/2;
+	@media (max-width: 768px) {
+		padding: $gutters/2 $gutters $gutters $gutters;
+	}
+}
+
+.inner {
+	background-color: lighten($color,30%);
+	min-height: 200px;
+}
+
+footer[role="contentinfo"] {
+	background-color: $color;
+	color: #fff;
+}
+
+.contentinfo-social, .contentinfo-about {
+	box-sizing: border-box;
+	float: left;
+}
+
+.contentinfo-social {
+	width: 24%;
+	padding: 0 $gutters/2 $gutters $gutters;
+	@media (max-width: 768px) {
+		width: 100%;
+		padding: 0 $gutters;
+	}
+}
+
+.contentinfo-about {
+	width: 76%;
+	padding: 0 $gutters $gutters $gutters/2;
+	@media (max-width: 768px) {
+		width: 100%;
+		padding: $gutters;
+	}
+}
+
+.group:after {
+	clear: both;
+	content: "";
+	display: table;
 }
